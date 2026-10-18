@@ -45,7 +45,7 @@ st.markdown("""
 # ── 讀取資料 ──
 @st.cache_data
 def load_data():
-    df = pd.read_csv('taipei_accident_3yr_with_poi.csv', encoding='utf-8-sig')
+    df = pd.read_csv('taipei_accident_3yr_with_poi.csv.gz', encoding='utf-8-sig', compression='gzip')
     road = pd.read_csv('road_accident_3yr_summary.csv', encoding='utf-8-sig')
     return df, road
 
